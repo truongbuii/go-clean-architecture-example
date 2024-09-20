@@ -1,0 +1,21 @@
+server:
+  Port: :8080
+  JwtSecretKey: 28f2804e587f46ef00232c621999b99b
+  AccessTokenDuration: 24h
+  RefreshTokenDuration: 72h
+
+postgres:
+  PostgresqlHost: localhost
+  PostgresqlPort: 5432
+  PostgresqlUser: root
+  PostgresqlPassword: secret
+  PostgresqlDbname: tiktok
+  PostgresqlSslmode: disable
+  PgDriver: postgresql
+
+cloudinary:
+  CloudName: ddncxed3m
+  CloudAPIKey: 696513454913377
+  CloudAPISecretKey: 483XGSHonXQAfO4c7h0q-weisOE
+  CloudUploadFolderVideo: tiktok-go
+  CloudUploadFolderAvatar: tiktok-go-avatar

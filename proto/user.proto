@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package pb;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "pb/";
+
+message GetUserByIDReq {
+  int64 id = 1;
+}
+
+message ProfileRequest {
+  int64 user_id = 1;
+  string username = 2;
+  string bio = 3;
+}
+
+message AvatarRequest {
+  int64 user_id = 1;
+  string avatar_url = 2;
+}
+
+message UserResp {
+  bool success = 1;
+}
+
+service UserService {
+  rpc UpdateProfile(ProfileRequest) returns (UserResp);
+  rpc ChangeAvatar(AvatarRequest) returns (UserResp);
+}
